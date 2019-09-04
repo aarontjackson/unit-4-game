@@ -1,50 +1,32 @@
-$(document).ready(function () {
-// game interface script
-let wins = 0;
-let losses = 0;
-let totalScore = 0;
+$( document ).ready(function() {
+    console.log("ready!");
 
-// Game Method
+    // game interface script
+    let wins = 0;
+    let losses = 0;
+    let totalScore = 0;
+    let randomResult;
+    let crystal;
 
-let gameManager = {
-    setGameStart: function(crystalType) {
-        this.resetGame(crystalType);
-        this.setTotal();
-    },
-    resetGame: function(crystalType) {
-        switch (crystalType) {
-            case "Diamond":
-            crystal = new Crystal(crystalType, randomAmount);
-            break;
-            case "Dragonstone":
-            crystal = new Crystal(crystalType, randomAmount);
-            break;
-            case "Topaz":
-            crystal = new Crystal(crystalType, randomAmount);
-            break;
-            case "Lapis":
-            crystal = new Crystal(crystalType, randomAmount);
-            break;
-            default:
-                alert("Select a crystal until you've reached the number");
-        }
-    },
-    setTotal: function() {
-
+    // Game Method
+    function gameManager() {
+        randomResult = Math.floor((Math.random() * 120) + 19);
+        $(".recorder").text(randomResult);
     }
-  
-}
 
-// Crystal Method
+    // Crystal Method
+    for (let c = 0; c < 4; c++){
 
-//crystal object is globally avaliable
-let Crystal;
-//crystal object will generate a random number 1 - 12
-function Crystal(crystalType, randomAmount) {
-    this.crystalType = crystalType;
-    this.randomAmount = Math.floor((Math.random() * 12) + 1);
-}
+        let random = Math.floor((Math.random() * 12) + 1);  
+        crystal = random;
+        $('#crystal').append(random); 
+        
+        $("#crystal").on("click", function () {
+        
+    
+        });
 
-   
+    
+    } 
+});  
 
-});
