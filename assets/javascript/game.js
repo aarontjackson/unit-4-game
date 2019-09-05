@@ -9,26 +9,72 @@
 
     // Game Method
     //random number that the user must match
-    randomResult = Math.floor((Math.random() * 120) + 19);
+    var gameManager = function() {
 
-    $(".recorder").html(randomResult);
+        //clear previous crystal game
+        $(".crystals").empty();
 
-    //random number generated for the 4 crystals
-    for (var index = 0; index < 4; index++) {
-        var random = Math.floor((Math.random() * 12) + 1); 
-        console.log(random);
+        //random number generator for crystals
+        randomResult = Math.floor((Math.random() * 120) + 19);
 
-        //creation of crystal class for user to select crystals to equal sum
-        var crystal = $("<div>");
-            crystal.attr({
-                "class": 'crystal',
-                "randomNumber": random
-            });
-        $(".crystals").append(crystal);
+        $(".recorder").html(randomResult);
+    
+        //random number generated for the 4 crystals
+        for (var index = 0; index < 4; index++) {
+    
+            var random = Math.floor((Math.random() * 12) + 1); 
+    
+            //creation of crystal class for user to select crystals to equal sum
+            var crystal = $("<div>");
+                crystal.attr({
+                    "class": 'crystal',
+                    "randomNumber": random
+                });
+
+            $(".crystals").append(crystal);
+        }
     }
-    $(".crystal").on("click", function(){
 
-        console.log($(this).attr("randomNumber"));
+    gameManager();
+  
+    //Event delegation "on-click"
+    $(document).on("click", ".crystal", function() {
+
+        //user total score documents as an integer
+        var crystalSelector = parseInt($(this).attr("randomNumber"));
+
+        $("#totalScore").html(totalScore);
+
+        totalScore += crystalSelector;
+        console.log(totalScore);
+
+        //adds a loss to the user record and resets the game
+        if(totalScore > randomResult) {
+
+             losses++;
+
+            $("#losses").html(losses);
+
+            totalScore = 0;
+
+            $("#wins").html(wins);
+
+            gameManager();
+        }
+
+        //adds a win to the user record and resets the game
+        else if(totalScore === randomResult) {
+
+            wins++;
+        
+            $("#wins").html(wins);
+
+            totalScore = 0;
+
+            $("#wins").html(wins);
+
+            gameManager();
+        }
 
     });
 }); 
