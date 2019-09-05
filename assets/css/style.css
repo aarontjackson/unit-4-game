@@ -24,11 +24,11 @@ h1 {
     color: white;
     font-weight: bolder;
     width: 300px;
-    height: 50px;
+    height: 60px;
     margin: 10px 5px;
     text-align: center;
     font-size: 36px;
-    padding: 15px 0 0 1px;
+    padding: 20px 0 0 1px;
 }
 
 .header {
@@ -46,10 +46,59 @@ h1 {
     line-height: 1.5rem;
     padding: 15px 5px 50px 2px;
 }
+
+.numberBox {
+    height: 100px;
+    width: 70px;
+    margin: 0 0 10px 5px;
+    padding: 0 0 0 5px;
+    background-color: turquoise;
+    float: left;
+}
+
+#randomNumber {
+    background-color: lightgreen;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkmagenta;
+    height: 100px;
+    width: 200px;
+    margin: 0 0 10px 5px;
+    padding: 0 0 0 5px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.count {
+    background-color: seagreen;
+    color: white;
+    height: 100px;
+    width: 200px;
+    margin: 0 0 10px 5px;
+    font-size: 30px;
+    padding: 5px 0 5px 5px;
+}
+
+.scoreHeader{
+    background-color: seagreen;
+    color: white;
+    width: 200px;
+    margin: 0 0 10px 5px;
+    padding: 5px 0 5px 5px;
+}
+
 p {
     margin: 10px 0;
 }
 
 img {
     width 50px;
+}
+
+body {
+    background-image: 
 }

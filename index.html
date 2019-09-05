@@ -28,34 +28,43 @@
         <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
             total score.</p>
-        <p>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>You will win the game by matching your total score to random number, you lose the game if your total score
+            goes above the random number.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
-        </section>
-      
+    </section>
+
 
     <!-- Tracks user current target number and wins/losses-->
-    <section class="scoreTracker">
-        <p><span class="recorder"></span></p>
-        <p>Wins:<span id="wins"></span></p>
-        <p>Losses:<span id="losses"></span></p>
+    <section class="clearfix">
+        <section id="randomNumber" class="numberBox">
+            <p><span class="recorder"></span></p>
+        </section>
+
+        <section class="numberBox">
+            <p>Wins:<span id="wins"></span></p>
+            <p>Losses:<span id="losses"></span></p>
+        </section>
     </section>
 
     <!-- section for user to select gems  -->
     <div class="crystals">
-        
+
     </div>
+<br><br>
 
-    <p>Your total score is:</p>
+    <p class="scoreHeader">Your total score is:</p>
 
-    <span id="totalScore"></span>
-    
+    <section class="count">
+        <span id="totalScore"></span>
+    </section>
+
     <!-- <img src="https://live.staticflickr.com/450/19963570582_82c6d30769_m.jpg" width="240" height="160" alt="">
     <img src="https://live.staticflickr.com/445/19348619254_ca95104376_m.jpg" width="240" height="160" alt="">
     <img src="https://live.staticflickr.com/3931/15562691802_0919545858_m.jpg" width="240" height="160" alt="">
    <img src="https://live.staticflickr.com/8029/7996396245_0afbda86ae_m.jpg" width="240" height="160" alt=""> -->
     <!-- counts the user total score -->
-  
+
 
 </body>
 
