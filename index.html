@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- linked JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <!-- linked stylesheets -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -19,19 +19,19 @@
 
 <body>
     <!-- opening header for the game -->
-    <div class="header">
+    <section class="header">
         <h1>CrystalsCollector!</h1>
-    </div>
+    </section>
 
     <!-- instructions for the user to follow -->
-    <div class="instructions">
+    <section class="instructions">
         <p>You will be given a random number at the tart of the game.</p>
         <p>There are four crystals below. By clicking on a crystal you will add a a specific amount of points to your
             total score.</p>
-        <p>You will win the game by matching your total score to random number, you lose the game if your total score goew above the random number.</p>
+        <p>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
-    </div>
+        </section>
 
     <!-- Tracks user current target number and wins/losses-->
     <div class="scoreTracker">
@@ -41,27 +41,12 @@
     </div>
 
     <!-- section for user to select gems  -->
-    <div class="crystalSelector">
-        <a href="#">
-            <img src="./assets/images/diamond.png" id="crystal" alt="select diamond">
-        </a>
-
-        <a href="#">
-            <img src="./assets/images/dragonstone.png" id="crystal" alt="select dragonstone">
-        </a>
-
-        <a href="#">
-            <img src="./assets/images/topaz.png" id="crystal" alt="select topaz">
-        </a>
-
-        <a href="#">
-            <img src="./assets/images/Lapis.png" id="crystal" alt="select lapis">
-        </a>
-
+    <div class="crystals">
+        
     </div>
 
     <!-- counts the user total score -->
-    <div class="gemCounter"> </div>
+  
 
 </body>
 

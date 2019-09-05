@@ -1,64 +1,35 @@
-// $( document ).ready(function() {
-//     console.log("ready!");
+  $(document).ready(function(){
+    console.log("ready!");
 
-    // Global variables
-    let wins = 0;
-    let losses = 0;
-    let totalScore = 0;
-    let randomResult;
-    let crystal;
+  // Global variables
+    var wins = 0;
+    var losses = 0;
+    var totalScore = 0;
+    var randomResult;
 
     // Game Method
-    function gameManager() {
+    //random number that the user must match
+    randomResult = Math.floor((Math.random() * 120) + 19);
 
-        $("#crystal").empty();
+    $(".recorder").html(randomResult);
 
-        randomResult = Math.floor((Math.random() * 120) + 19);
-   
-        $(".recorder").text(randomResult);
+    //random number generated for the 4 crystals
+    for (var index = 0; index < 4; index++) {
+        var random = Math.floor((Math.random() * 12) + 1); 
+        console.log(random);
 
-    
-         for (let c = 0; c < 4; c++){
+        //creation of crystal class for user to select crystals to equal sum
+        var crystal = $("<div>");
+            crystal.attr({
+                "class": 'crystal',
+                "randomNumber": random
+            });
+        $(".crystals").append(crystal);
+    }
+    $(".crystal").on("click", function(){
 
-            let random = Math.floor((Math.random() * 12) + 1);  
+        console.log($(this).attr("randomNumber"));
 
-            return crystal = random;
-
-        $('#crystal').append(crystal); 
-    } 
-}
-gameManager();
-
-    //Crystal Event Method
-    $(document).on("click", "#crystal", function () {
-
-        let result = parseInt($(this));
-
-        totalScore += result;
-
-        $(".gemCounter").text("Total Score: " + totalScore);
-
-        if(totalScore > randomResult) {
-
-            losses++;
-
-            $("#losses").text(losses);
-
-            totalScore = 0;
-
-            gameManager();
-
-        }
-        else if(totalScore === randomResult){
-
-            win++;
-
-            $("#wins").text(losses);
-
-            totalScore = 0;
-
-            gameManager();
-        }
-
-        gameManager();
     });
+}); 
+
