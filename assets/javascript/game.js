@@ -57,7 +57,7 @@ $(document).ready(function () {
         totalScore += crystalSelector;
 
         $("#totalScore").html(totalScore);
-
+        
         console.log(totalScore);
 
         //adds a loss to the user record and resets the game

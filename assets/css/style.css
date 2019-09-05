@@ -1,7 +1,6 @@
 .crystals {
     display: flex;
     justify-content: space-around;
-    border: 1px solid red;
     align-items: center;
 }
 
@@ -10,20 +9,47 @@
     height: 200px;
     width: 200px;
     border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 1s;
+}
+
+.crystal:hover{
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: box-shadow 1s;
 }
 
 h1 {
     background-color: coral;
-    width: 200px;
-    height: 100px;
+    color: white;
+    font-weight: bolder;
+    width: 300px;
+    height: 50px;
     margin: 10px 5px;
+    text-align: center;
+    font-size: 36px;
+    padding: 15px 0 0 1px;
+}
+
+.header {
+    display: inline-block;
 }
 
 .instructions {
-    background-color: tan;
-    width: 300px;
-    height: 250px;
-    margin: 0 0 10px 0;
+    background-color: burlywood;
+    color: green;
+    font-weight: bold;
+    width: 400px;
+    height: 350px;
+    margin: 0 0 10px 5px;
     text-align: justify;
-    padding: 5px;
+    line-height: 1.5rem;
+    padding: 15px 5px 50px 2px;
+}
+p {
+    margin: 10px 0;
+}
+
+img {
+    width 50px;
 }
