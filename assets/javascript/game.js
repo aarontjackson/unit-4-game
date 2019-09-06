@@ -44,6 +44,10 @@ $(document).ready(function () {
 
             $(".crystals").append(crystal);
         }
+
+        $("#totalScore").html(totalScore);
+        $("#losses").html(losses);
+        $("#wins").html(wins);
     }
 
     gameManager();
